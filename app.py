@@ -1,8 +1,14 @@
 # app.py
+import sys
+import os
+
+# Safe Path-Resolution Infrastructure (Resolves Streamlit Cloud ModuleNotFoundError)
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(os.getcwd())
+
 import streamlit as st
 import json
 import tempfile
-import os
 import io
 import time
 import pandas as pd
